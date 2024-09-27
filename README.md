@@ -1,1 +1,5 @@
-# README 
+# README TP-2-B2
+
+## Tableaux d'usages de l'API randomuser 
+### Projet en Js, Json, HTML
+

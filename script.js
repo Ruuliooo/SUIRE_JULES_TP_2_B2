@@ -8,6 +8,9 @@ const fetchData = async () => {
     const data = await request.json();
     console.log(data.results);
     return data.results;
+  } catch (error) {
+      console.log(error);
+  }
 };
 
 const insertData = async () => {
@@ -17,26 +20,23 @@ const insertData = async () => {
     const gender = data.gender;
     if (gender === "male") {
       row.style.backgroundColor = "lightyellow";
-      genderIcon = "./img/homme.png";
+      genderIcon = "./img/inutile.png";
     } else if (gender === "female") {
       row.style.backgroundColor = "lightpurple";
-      genderIcon = "./img/femme.png";
-    } else {
-      row.style.backgroundColor = "lightgreen";
-      genderIcon = "./img/other.png";
+      genderIcon = "./img/cuisine.png";
     }
-    
-    row.innerHTML = `
-      <td>${data.login.username}</td>
-      <td><img src = '${genderIcon}'/></td>
-      <td>${data.name.title} ${data.name.last} ${data.name.first}</td>
-      <td><img src = '${data.picture.medium}'/></td>
-      <td>${data.location.city}</td>
-      <td class = 'colonne-country'><img src = 'https://flagsapi.com/${data.nat}/flat/64.png' /> ${data.location.country}</td>
-    `;
-    tbody.appendChild(row);
+
+row.innerHTML = `
+  <td>${data.login.username}</td>
+  <td><img src = '${genderIcon}'/></td>
+  <td>${data.name.title} ${data.name.last} ${data.name.first}</td>
+  <td><img src = '${data.picture.medium}'/></td>
+  <td>${data.location.city}</td>
+  <td class = 'colonne-country'><img src = 'https://flagsapi.com/${data.nat}/flat/64.png' /> ${data.location.country}</td>
+`;
+tbody.appendChild(row);
   }
 };
 
-insertData();
+
 

@@ -26,15 +26,15 @@ const insertData = async () => {
       genderIcon = "./img/cuisine.png";
     }
 
-row.innerHTML = `
-  <td>${data.login.username}</td>
-  <td><img src = '${genderIcon}'/></td>
-  <td>${data.name.title} ${data.name.last} ${data.name.first}</td>
-  <td><img src = '${data.picture.medium}'/></td>
-  <td>${data.location.city}</td>
-  <td class = 'colonne-country'><img src = 'https://flagsapi.com/${data.nat}/flat/64.png' /> ${data.location.country}</td>
-`;
-tbody.appendChild(row);
+    row.innerHTML = `
+      <td>${data.login.username}</td>
+      <td><img src = '${genderIcon}'/></td>
+      <td>${data.name.title} ${data.name.last} ${data.name.first}</td>
+      <td><img src = '${data.picture.medium}'/></td>
+      <td>${data.location.city}</td>
+      <td class = 'colonne-country'><img src = 'https://flagsapi.com/${data.nat}/flat/64.png' /> ${data.location.country}</td>
+    `;
+  tbody.appendChild(row);
   }
 };
 

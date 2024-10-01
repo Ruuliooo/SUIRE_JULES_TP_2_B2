@@ -19,10 +19,10 @@ const insertData = async () => {
     const row = document.createElement("tr");
     const gender = data.gender;
     if (gender === "male") {
-      row.style.backgroundColor = "lightyellow";
+      row.style.backgroundColor = "pink";
       genderIcon = "./img/inutile.png";
     } else if (gender === "female") {
-      row.style.backgroundColor = "lightpurple";
+      row.style.backgroundColor = "ligtblue";
       genderIcon = "./img/cuisine.png";
     }
 

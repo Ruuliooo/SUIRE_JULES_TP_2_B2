@@ -21,10 +21,10 @@ const insertData = async () => {
     const gender = data.gender;
     if (gender === "male") {
       row.style.backgroundColor = "lightgreen";
-      genderIcon = "./img/inutile.png";
+      genderIcon = "./img/man.png";
     } else if (gender === "female") {
       row.style.backgroundColor = "lightyellow";
-      genderIcon = "./img/cuisine.png";
+      genderIcon = "./img/women.png";
     }
     // Ajouter les données dans le tableau
     row.innerHTML = `

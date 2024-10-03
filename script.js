@@ -1,4 +1,5 @@
 const apiUrl = "https://randomuser.me/api/?results=50";
+const openweathermap = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={9041e44f7110540463d1a50d2faa23b9}";
 const tbody = document.getElementById("table-body");
 
 // Récupérer les données de l'API
@@ -21,10 +22,10 @@ const insertData = async () => {
     const gender = data.gender;
     if (gender === "male") {
       row.style.backgroundColor = "lightgreen";
-      genderIcon = "./img/inutile.png";
+      genderIcon = "./img/man.png";
     } else if (gender === "female") {
       row.style.backgroundColor = "lightyellow";
-      genderIcon = "./img/cuisine.png";
+      genderIcon = "./img/woman.png";
     }
     // Ajouter les données dans le tableau
     row.innerHTML = `
@@ -32,7 +33,8 @@ const insertData = async () => {
       <td><img src = '${genderIcon}'/></td>
       <td>${data.name.title} ${data.name.last} ${data.name.first}</td>
       <td><img src = '${data.picture.medium}'/></td>
-      <td>${data.location.city}</td>
+      <td>${data.location.city, data.location.coordinates.latitude, data.location.coordinates.longitude}</td>
+      <td>
       <td class = 'colonne-country'><img src = 'https://flagsapi.com/${data.nat}/flat/64.png' /> ${data.location.country}</td>
     `;
     tbody.appendChild(row);
@@ -40,3 +42,7 @@ const insertData = async () => {
 };
 
 insertData();
+
+
+//const temps = data.meteo.city;
+//<td>${data.meteo.city}</td>

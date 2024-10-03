@@ -6,3 +6,5 @@ A partir d'un fichier de données (au format JSON) fourni, je dois afficher les 
 
 L'objectif est d'intégrer l'API à notre site web puis à rendre plus jolie le tableau via un CSS (Bootstrap et/ou Tailwind css)
 
+## Mise à jour
+Dernière mise à jour effectuée le ```03/10/2024```

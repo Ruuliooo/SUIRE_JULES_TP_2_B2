@@ -25,8 +25,7 @@ const insertData = async () => {
       genderIcon = "./img/man.png";
     } else if (gender === "female") {
       row.style.backgroundColor = "lightyellow";
-      genderIcon = "./img/woman.png";
-    }
+
 const fetchOpenw = async () => {
   try {
     const request = await fetch(openweathermap);

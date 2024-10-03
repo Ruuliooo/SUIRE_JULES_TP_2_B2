@@ -27,6 +27,25 @@ const insertData = async () => {
       row.style.backgroundColor = "lightyellow";
       genderIcon = "./img/woman.png";
     }
+const fetchOpenw = async () => {
+  try {
+    const request = await fetch(openweathermap);
+    const openw = await request.json();
+    console.log(openw.results);
+    return open.results;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const insertData = async () => {
+  const openws = await fetchOpenw();
+  for (const openw of openws) {
+    const coord = document.createElement("tr");
+    const coordinatesLon = openw.coord.lon;
+    const coordinatesLat = openw.coord.lat;
+  }
+}
     // Ajouter les données dans le tableau
     row.innerHTML = `
       <td>${data.login.username}</td>

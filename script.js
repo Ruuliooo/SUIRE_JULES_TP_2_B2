@@ -19,16 +19,12 @@ const insertData = async () => {
   for (const data of datas) {
     const row = document.createElement("tr");
     const gender = data.gender;
-    // Ajouter une couleur de fond et une img en fonction du genre
     if (gender === "male") {
-      row.style.backgroundColor = "lightblue";
-      genderIcon = "./img/homme.png";
-    } else if (gender === "female") {
-      row.style.backgroundColor = "lightpink";
-      genderIcon = "./img/femme.png";
-    } else {
       row.style.backgroundColor = "lightgreen";
-      genderIcon = "./img/other.png";
+      genderIcon = "./img/inutile.png";
+    } else if (gender === "female") {
+      row.style.backgroundColor = "lightyellow";
+      genderIcon = "./img/cuisine.png";
     }
     // Ajouter les données dans le tableau
     row.innerHTML = `

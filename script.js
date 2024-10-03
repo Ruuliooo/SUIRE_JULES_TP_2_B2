@@ -25,7 +25,8 @@ const insertData = async () => {
       genderIcon = "./img/man.png";
     } else if (gender === "female") {
       row.style.backgroundColor = "lightyellow";
-
+      genderIcon ="./img/woman.png";
+    }
 const fetchOpenw = async () => {
   try {
     const request = await fetch(openweathermap);
@@ -37,21 +38,22 @@ const fetchOpenw = async () => {
   }
 };
 
-const insertData = async () => {
+const insertOpenw = async () => {
   const openws = await fetchOpenw();
   for (const openw of openws) {
     const coord = document.createElement("tr");
     const coordinatesLon = openw.coord.lon;
     const coordinatesLat = openw.coord.lat;
+    if (coordinatesLat);
   }
-}
+};
     // Ajouter les données dans le tableau
     row.innerHTML = `
       <td>${data.login.username}</td>
       <td><img src = '${genderIcon}'/></td>
       <td>${data.name.title} ${data.name.last} ${data.name.first}</td>
       <td><img src = '${data.picture.medium}'/></td>
-      <td>${data.location.city, data.location.coordinates.latitude, data.location.coordinates.longitude}</td>
+      <td>${data.location.city}</td>
       <td>
       <td class = 'colonne-country'><img src = 'https://flagsapi.com/${data.nat}/flat/64.png' /> ${data.location.country}</td>
     `;
@@ -60,6 +62,7 @@ const insertData = async () => {
 };
 
 insertData();
+insertOpenw();
 
 
 //const temps = data.meteo.city;
